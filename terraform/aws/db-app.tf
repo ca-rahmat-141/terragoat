@@ -262,7 +262,7 @@ cat << EnD > /tmp/dbinfo.inc
 <?php
 define('DB_SERVER', '${aws_db_instance.default.endpoint}');
 define('DB_USERNAME', '${aws_db_instance.default.username}');
-define('DB_PASSWORD', '${var.password}');
+define('DB_PASSWORD', base64_decode('${base64encode(var.password)}'));
 define('DB_DATABASE', '${aws_db_instance.default.name}');
 ?>
 EnD
