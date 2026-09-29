@@ -41,7 +41,7 @@ Before you proceed please take a not of these warning:
 
 ## Requirements
 
-* Terraform 0.12
+* Terraform 0.13 or later
 * aws cli
 * azure cli
 

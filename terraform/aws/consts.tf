@@ -40,6 +40,11 @@ variable "password" {
   type        = "string"
   description = "Database password"
   default     = "Aa1234321Bb"
+
+  validation {
+    condition     = length(regexall("^[A-Za-z0-9]+$", var.password)) > 0
+    error_message = "The database password must contain only alphanumeric characters."
+  }
 }
 
 variable "neptune-dbname" {
